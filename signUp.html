@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+    <script src="assets/js/auth.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    />
+    <title>Sign in/Up</title>
+  </head>
+  <body>
+    <div class="form__container h-[600px] grid place-items-cente">
+      <div class="_inner_ w-[400px] h-[520px] rounded border-[#e5e5e5]">
+        <div class="top__container w-full">
+          <div
+            class="_inner_ w-full h-full flex flex-col justify-center items-center space-y-6 px-10 py-8"
+          >
+            <div class="_top_ text-[#333333]">Sign up to Abstract</div>
+            <div class="_middle_ text-[#49545c] text-[13px] text-center">
+              <span
+                >Please fill out this form, and we'll send you a welcome email
+                so you can verify your email address and sign in.</span
+              >
+            </div>
+            <div class="_bottom_ text-[#49545c] text-[13px]">
+              <span>Required fields are marked by an asterisk (*)</span>
+            </div>
+          </div>
+        </div>
+        <div class="middle__container w-full">
+          <div class="_inner_ h-full flex sm:mx-10">
+            <div class="_right_ h-full flex-1 px-10 md:px-0">
+              <form id="signUpForm">
+                <div class="_inner_ flex flex-col">
+                  <label
+                    class="text-[13px] font-medium text-[#2f3941] mb-2"
+                    for="fullName"
+                    >Your full name *</label
+                  >
+                  <input
+                    class="border-[gray] border-[1px] hover:border-[#1f73b7] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0 rounded px-[10px] py-[9px] text-sm"
+                    onchange="ChangeHandler(event)"
+                    id="fullName"
+                    type="text"
+                    name="fullName"
+                    required
+                  />
+                  <label
+                    class="text-[13px] font-medium text-[#2f3941] mb-2 mt-[10px]"
+                    for="upEmail"
+                    >Your email *</label
+                  >
+                  <input
+                    class="border-[gray] border-[1px] hover:border-[#1f73b7] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0 rounded px-[10px] py-[9px] text-sm"
+                    onchange="ChangeHandler(event)"
+                    id="upEmail"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <button
+                  class="text-white text-sm bg-[#1f73b7] w-full mt-[20px] rounded p-[11px] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                  type="submit"
+                >
+                  <strong>Sign up</strong>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__container px-10 py-4">
+          <div class="_inner_ flex flex-col text-xs space-y-2">
+            <div>
+              <span
+                class="flex justify-end items-end text-[#68737d] hover:underline underline-offset-[1px]"
+                ><a
+                  class="focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                  href="signIn.html"
+                  >Cancel</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <dialog id="my_modal_2" class="modal rounded-lg p-6 pt-2">
+      <form method="dialog" class="modal-backdrop flex justify-end">
+        <button>
+          <box-icon name="x" type="solid" color="black" size="sm"></box-icon>
+        </button>
+      </form>
+      <div class="modal-box space-y-4">
+        <h3 class="text-lg font-bold">
+          Welcome
+          <span class="text-red-400" id="userName"></span> !
+        </h3>
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/auth.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    />
+    <title>Sign in/Up</title>
+  </head>
+  <body>
+    <div class="form__container h-[700px] grid place-items-cente">
+      <div
+        class="_inner_ lg:w-[750px] sm:w-[400px] h-[600px] lg:h-[460px] rounded border-[#e5e5e5]"
+      >
+        <div class="top__container w-full h-[20%] lg:h-[25%]">
+          <div
+            class="_inner_ w-full h-full flex flex-col justify-center items-center space-y-2"
+          >
+            <div class="_top_ text-[#333333]">Sign in to Abstract</div>
+            <div class="_bottom_">
+              <a
+                href="/agent-sign-in"
+                class="text-[#144a75] hover:underline underline-offset-1 text-sm focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                >Switch to agent sign-in
+                <span class="text-[#0000ee] text-xs"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="middle__container w-full h-[66%] lg:h-[56%]">
+          <div class="_inner_ h-full flex sm:mx-10">
+            <div class="_left_ h-full flex-1 hidden lg:block">
+              <div class="google_auth__container h-full">
+                <a
+                  href="https://accounts.google.com/o/oauth2/auth?client_id=549058096711-o7bo9va3gh7apug0ain68ailbtr58l78.apps.googleusercontent.com&include_granted_scopes=true&prompt=select_account&redirect_uri=https%3A%2F%2Fgoogle.zendesk.com%2Fauth%2Fgoogle&response_type=code&scope=email+profile&state=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXR1cm5fdG8iOiJodHRwczovL2hlbHAuYWJzdHJhY3QuY29tL2hjL2VuLXVzIiwic3ViZG9tYWluIjoiZ29hYnN0cmFjdCIsInN0YXRlIjoiNGMzYzYyZTgzOGNhNmQ0MzdiNjk1YTY4ZDNjMWQ1NDM1Nzg5OTBjYiJ9.hVBT1etOOA9kmEf2J0YTme3bffAVkfZP-cyt-NKOg9o"
+                  class="google_inner_ group/google w-full h-[15%] rounded-sm bg-white hover:bg-[#eeeeee] flex focus:outline outline-[#1f73b7] outline-1 outline-offset-0"
+                >
+                  <div
+                    class="_img_ h-full w-[15%] flex justify-center items-center"
+                  >
+                    <img
+                      class="w-[18px] h-[18px]"
+                      src="img/google.png"
+                      alt="google"
+                    />
+                  </div>
+                  <div
+                    class="_content_ h-full w-[85%] flex items-center text-sm text-[#49545c] group-hover/google:text-[#144a75] font-medium"
+                  >
+                    Sign in with Google
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="entity_separator w-[3%] h-[70%] px-10 hidden lg:block">
+              <div class="min-w-[1px] min-h-full bg-[#cccccc]"></div>
+            </div>
+            <div class="_right_ h-full flex-1 px-10 md:px-0">
+              <form id="loginForm">
+                <div class="google_auth__container w-full block lg:hidden">
+                  <a
+                    href="https://accounts.google.com/o/oauth2/auth?client_id=549058096711-o7bo9va3gh7apug0ain68ailbtr58l78.apps.googleusercontent.com&include_granted_scopes=true&prompt=select_account&redirect_uri=https%3A%2F%2Fgoogle.zendesk.com%2Fauth%2Fgoogle&response_type=code&scope=email+profile&state=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXR1cm5fdG8iOiJodHRwczovL2hlbHAuYWJzdHJhY3QuY29tL2hjL2VuLXVzIiwic3ViZG9tYWluIjoiZ29hYnN0cmFjdCIsInN0YXRlIjoiNGMzYzYyZTgzOGNhNmQ0MzdiNjk1YTY4ZDNjMWQ1NDM1Nzg5OTBjYiJ9.hVBT1etOOA9kmEf2J0YTme3bffAVkfZP-cyt-NKOg9o"
+                    class="google_inner_ group/google w-full py-[12px] rounded-sm bg-white hover:bg-[#eeeeee] flex focus:outline outline-[#1f73b7] outline-1 outline-offset-0"
+                  >
+                    <div
+                      class="_img_ h-full w-[15%] flex justify-center items-center"
+                    >
+                      <img
+                        class="w-[18px] h-[18px]"
+                        src="img/google.png"
+                        alt="google"
+                      />
+                    </div>
+                    <div
+                      class="_content_ h-full w-[85%] flex items-center text-sm text-[#49545c] group-hover/google:text-[#144a75] font-medium"
+                    >
+                      Sign in with Google
+                    </div>
+                  </a>
+                </div>
+                <div
+                  class="entity_separator w-full min-h-[16%] py-10 block lg:hidden"
+                >
+                  <div class="min-h-[1px] max-h-[1px] bg-[#cccccc]"></div>
+                </div>
+                <div class="_inner_ flex flex-col">
+                  <label
+                    class="text-xs font-medium text-[#2f3941] mb-2"
+                    for="mail"
+                    >Email</label
+                  >
+                  <input
+                    class="border-[gray] border-[1px] hover:border-[#1f73b7] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0 rounded px-[10px] py-[9px] text-sm"
+                    id="mail"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                  <label
+                    class="text-xs font-medium text-[#2f3941] mb-2 mt-[10px]"
+                    for="pass"
+                    >Password</label
+                  >
+                  <input
+                    class="border-[gray] border-[1px] hover:border-[#1f73b7] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0 rounded px-[10px] py-[9px] text-sm"
+                    id="pass"
+                    type="password"
+                    name="password"
+                    required
+                  />
+                  <div class="_forgot_pass_ mt-2 text-[#144a75] text-sm">
+                    <a
+                      class="underline underline-offset-[1px] focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                      href="/forgot-pass"
+                      >Forgot password?</a
+                    >
+                  </div>
+                </div>
+                <button
+                  class="text-white text-sm bg-[#1f73b7] w-full mt-[20px] rounded p-[11px] focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                  type="submit"
+                >
+                  <strong>Sign in</strong>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__container lg:h-auto px-10">
+          <div class="_inner_ flex flex-col text-xs space-y-2">
+            <div class="text-[#49545c]">
+              Emailed us for support?
+              <span class="text-[#144a75] underline underline-offset-[1px]"
+                ><a
+                  class="focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                  href="/reset-password"
+                  >Get a password</a
+                >
+              </span>
+            </div>
+            <div class="text-[#49545c]">
+              New to Abstract?
+              <span class="text-[#144a75] underline underline-offset-[1px]"
+                ><a
+                  class="focus:border-0 focus:outline outline-[#1f73b7] outline-4 outline-offset-0"
+                  href="signUp.html"
+                  >Sign up</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

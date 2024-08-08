@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    />
+    <title>Abstract clone</title>
+  </head>
+  <body>
+    <!-- <div class="w-full h-full absolute z-[-2]">
+      <div
+        class="help_b_container absolute bottom-0 right-0 m-[20px] py-[11px] px-[20px] bg-[#4c5fd5] rounded-full active:ring"
+      >
+        <button class="help_b_inner flex justify-center items-center">
+          <box-icon
+            class="w-[28px] h-[28px]"
+            name="help-circle"
+            type="logo"
+            color="white"
+            size="md"
+          ></box-icon>
+          <span class="text-white text-lg ml-2"><strong>Help</strong></span>
+        </button>
+      </div>
+    </div> -->
+    <div class="intire-body">
+      <div class="top">
+        <nav class="navBar__container bg-black w-[100%]">
+          <div
+            class="navBar__inner container-xxl mx-auto flex justify-end items-center text-white relative"
+          >
+            <div
+              class="left_section mr-auto w-[60%] md:w-[30%] md:mx-[30px] md:mb-[20px] text-2xl flex items-center pt-4"
+            >
+              <div class="logo__container flex items-center">
+                <a
+                  href="/"
+                  class="Nav__logo hover:opacity-80 transition ease-in-out delay-70 flex items-center justify-center"
+                >
+                  <div>
+                    <img
+                      src="img/logo.png"
+                      class="w-[37px] h-[45px]"
+                      alt="Logo"
+                    />
+                  </div>
+                  <div class="font-medium ml-[5px]">Abstract</div>
+                </a>
+                <div class="Nav_separator mx-2 cursor-default">|</div>
+                <a href="/help-center" class="Nav__help space-x-2">
+                  <span class="font-[400] hover:underline underline-offset-2"
+                    >Help Center</span
+                  >
+                </a>
+              </div>
+            </div>
+            <div
+              class="right_section h-[100%] w-[30%] md:w-[60%] flex justify-end items-center mr-4 sm:mr-14 space-x-4 text-2xl"
+            >
+              <a
+                href="/contact-support"
+                class="contact__support button border-[gray] bg-[#191a1b] border-[1px] my-4"
+                >Submit a request</a
+              >
+              <a
+                href="signIn.html"
+                class="signIn__Up button bg-blue-600 hover:bg-white hover:text-black transition ease-in-out delay-80 px-8 my-4"
+                >Sign in</a
+              >
+              <button
+                onclick="toggleSearchContainer(true)"
+                class="search__icon flex justify-center place-items-center py-4 min-[1100px]:hidden transition ease-in-out delay-100"
+              >
+                <box-icon
+                  name="search"
+                  type="logo"
+                  color="white"
+                  size="md"
+                ></box-icon>
+              </button>
+              <button
+                onclick="toggleDropDownMenu()"
+                class="menu__icon flex justify-center place-items-center py-4 min-[1100px]:hidden transition ease-in-out delay-100"
+              >
+                <box-icon
+                  name="menu"
+                  type="logo"
+                  color="white"
+                  size="md"
+                ></box-icon>
+              </button>
+              <div
+                class="drop-down-menu__container absolute bottom-[-200px] right-0 h-[200px] bg-black hidden w-full border-t-[1px] border-[gray] grid place-items-center place-content-center space-y-[20px]"
+              >
+                <div class="drop-down-item text-center">
+                  <a
+                    href="/contact-support"
+                    class="hover:opacity-60 transition ease-in-out delay-80"
+                    >Submit a request</a
+                  >
+                </div>
+                <div class="grid place-items-center place-content-center">
+                  <hr class="drop-down__separator" />
+                </div>
+                <div class="drop-down-item text-center">
+                  <a
+                    href="/signIn-Up"
+                    class="hover:opacity-60 transition ease-in-out delay-80"
+                    >Sign in</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="search__container absolute w-full h-full flex justify-center place-items-center bg-white my-auto hidden"
+            >
+              <div
+                class="w-[80%] h-[92%] container mx-auto flex justify-center place-items-center"
+              >
+                <input
+                  class="search__bar w-full h-[60%] outline-none border-black border-[1px] rounded text-black text-lg p-4"
+                  type="text"
+                  placeholder="Search"
+                />
+                <button class="pt-2" onclick="toggleSearchContainer(false)">
+                  <box-icon
+                    name="x"
+                    type="solid"
+                    color="black"
+                    size="sm"
+                  ></box-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="hero w-full flex justify-center items-center h-[350px] lg:h-[400px] bg-[#dadbf1]"
+        >
+          <div
+            class="flex flex-col justify-center items-center w-[90%] h-[80%] space-y-10"
+          >
+            <div class="hero__item w-full flex justify-center">
+              <p
+                class="hero_title text-6xl md:text-[80px] lg:text-[70px] xl:text-[78px]"
+              >
+                How can we help?
+              </p>
+            </div>
+            <div class="hero__item w-full flex justify-center">
+              <input
+                class="main__search w-full lg:w-[75%] xl:w-[760px] h-[66px] outline-none border-black hover:border-blue-600 active:border-blue-600 focus:border-blue-600 border-[1px] rounded p-4 shadow-lg text-xl text-bold"
+                type="text"
+                placeholder="Search"
+              />
+              <!-- <box-icon
+                name="right-arrow-alt"
+                type="logo"
+                color="black"
+                size="md"
+              ></box-icon> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="features__container xl:max-h-[1100px] w-[100%] bg-white">
+          <div
+            class="features__inner container-xxl mx-auto w-full h-full p-4 py-32 md:p-32 lg:p-36 xl:p-40"
+          >
+            <div class="card_container grid w-full">
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-versions.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 pr-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong>Using Abstract</strong>
+                  </div>
+                  <div class="_detail_ text-2xl">
+                    Abstract lets you manage, version, and document your designs
+                    in one place.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/versions"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-account.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 pr-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong> Manage your account</strong>
+                  </div>
+                  <div class="_detail_ text-[24px]">
+                    Configure your account settings, such as your email, profile
+                    details, and password.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/account"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-organizations.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 pr-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong> Manage organizations, teams, and projects</strong>
+                  </div>
+                  <div class="_detail_ text-2xl">
+                    Use Abstract organizations, teams, and projects to organize
+                    your people and your work.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/organizations"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-billing.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 pr-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong> Manage billing</strong>
+                  </div>
+                  <div class="_detail_ text-2xl">
+                    Change subscriptions and payment details.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/billing"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-authenticate.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 pr-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong>Authenticate to Abstract</strong>
+                  </div>
+                  <div class="_detail_ text-2xl">
+                    Set up and configure SSO, SCIM, and Just-in-Time
+                    provisioning.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/authenticate"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__card flex">
+                <div class="img_container w-[20%] md:w-[15.6%]">
+                  <img src="img/fetures/icon-comment.png" />
+                </div>
+                <div
+                  class="content_container w-[80%] md:w-[84.4%] pl-8 flex flex-col space-y-4"
+                >
+                  <div class="_title_ text-2xl">
+                    <strong>Abstract support</strong>
+                  </div>
+                  <div class="_detail_ text-2xl">
+                    Get in touch with a human.
+                  </div>
+                  <div
+                    class="_learn_more_ text-xl text-blue-700 hover:underline underline-offset-2"
+                  >
+                    <a href="/comment"> Learn More → </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <footer class="footer__container w-full min-h-[400px] bg-black">
+          <div
+            class="footer_inner w-full min-h-[400px] container-xxl mx-auto grid grid-cols-2 lg:grid-cols-5 text-white px-16 xl:px-28 py-10"
+          >
+            <dl class="mb-10 lg:mb-0 max-w-[300px]">
+              <dt><strong>Abstract</strong></dt>
+              <dd><a href="/Start Trial">Start Trial</a></dd>
+              <dd><a href="/Pricing">Pricing</a></dd>
+              <dd><a href="/Download">Download</a></dd>
+            </dl>
+            <dl class="mb-10 lg:mb-0 max-w-[300px]">
+              <dt><strong>Resources</strong></dt>
+              <dd><a href="/Blog">Blog</a></dd>
+              <dd><a href="/Help Center">Help Center</a></dd>
+              <dd><a href="/Release Notes">Release Notes</a></dd>
+              <dd><a href="/Status">Status</a></dd>
+            </dl>
+            <dl class="mb-10 lg:mb-0 max-w-[300px]">
+              <dt><strong>Community</strong></dt>
+              <dd><a href="/Twitter">Twitter</a></dd>
+              <dd><a href="/LinkedIn">LinkedIn</a></dd>
+              <dd><a href="/Facebook">Facebook</a></dd>
+              <dd><a href="/Dribbble">Dribbble</a></dd>
+              <dd><a href="/Podcast">Podcast</a></dd>
+            </dl>
+            <dl class="mb-10 lg:mb-0 max-w-[300px]">
+              <dt><strong>Company</strong></dt>
+              <dd><a href="/About Us">About Us</a></dd>
+              <dd><a href="/Careers">Careers</a></dd>
+              <dd><a href="/Legal">Legal</a></dd>
+              <dt class="exception mt-8 text-md">
+                <strong>Contact Us</strong>
+              </dt>
+              <dd class="hover:underline underline-offset-1">
+                <a href="mailto:info@abstract.com">info@abstract.com</a>
+              </dd>
+            </dl>
+            <div class="footer__logo flex flex-col justify-end text-xl">
+              <ul>
+                <li class="mb-4">
+                  <img
+                    src="img/logo.png"
+                    class="w-[37px] h-[45px]"
+                    alt="Logo"
+                  />
+                </li>
+                <li>© Copyright 2024</li>
+                <li>Abstract Studio Design, Inc.</li>
+                <li>All rights reserved</li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
